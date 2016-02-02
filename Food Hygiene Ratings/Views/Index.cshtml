@@ -1,0 +1,24 @@
+﻿<div ng-controller="Controller" class="container">
+    <p>{{error}}</p>
+    <ul class="businesses">
+        <li ng-repeat="business in businesses" ng-class="{ 'active': showDetails }" class="business" ng-click="showDetails = ! showDetails">
+            <h3 class="heading">
+                {{business.businessname}}<h3 ng-class="{bad: (business.hygienescore < 2.5), good: (business.hygienescore > 2.5)}" class="rating">{{business.hygienescore}}</h3>
+            </h3>
+            <div class="details" ng-class="{ 'hidden': ! showDetails }">
+                <div class="vcard">
+                    <div class="adr">
+                        <div class="street-address">
+                            {{business.addressline1}}
+                            <br />
+                            {{business.addressline2}}
+                        </div>
+                        <div class="locality">{{business.addressline3}}</div>
+                        <div class="region">{{business.addressline4}}</div>
+                        <div class="postal-code">{{business.postcode}}</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

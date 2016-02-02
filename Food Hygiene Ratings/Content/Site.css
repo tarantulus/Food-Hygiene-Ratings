@@ -1,0 +1,84 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: linear-gradient(135deg, #e2efe3 0%,#91b4a7 50%,#efdac7 51%,#7db9e8 100%);
+    height:100%;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+h3{
+    font-size: 2rem;
+    font-weight: normal;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul.businesses{
+    max-width: 50%;
+}
+li.business{
+    color:antiquewhite;
+    transition: 0.5s ease;
+    background-color: #ffffee;
+    padding: 20px;
+    margin: 40px;
+    list-style-type: none;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px;
+    background-image: url('http://lorempixel.com/700/300/food');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li.active{
+    transition: 0.5s ease;
+    background-image: none;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    margin: 40px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.rating{
+    display: block;
+    width: 2em;
+    position:relative;
+    top: -2em
+}
+
+.bad{
+    background-color: #dd0000;
+}
+
+.good{
+    background-color: #00dd00;
+}
